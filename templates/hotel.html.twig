@@ -1,0 +1,60 @@
+{% extends 'basefront.html.twig' %}
+
+{% block title %}Reservation{% endblock %}
+
+{% block body %}
+    {{ include('head.html.twig') }}
+
+<section class="u-align-center u-clearfix u-gradient u-section-1" id="sec-215f">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-1">Sample Headline</h2>
+        <p class="u-text u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p><!--products--><!--products_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/products_options_json-->
+        <div class="u-expanded-width u-products u-products-1">
+            <div class="u-repeater u-repeater-1"><!--product_item-->
+               ><!--product_item-->
+                {% for location in locations %}
+    <div class="u-align-center u-container-style u-products-item u-repeater-item">
+    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><!--product_image-->
+        <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-1" src="{{ asset( location.url ) }}"><!--/product_image-->
+        <div class="u-align-center u-container-style u-grey-10 u-group u-group-1">
+            <div class="u-container-layout u-valign-bottom u-container-layout-2"><!--product_title-->
+               <h2 name="localisation">{{ location.localisation }}</h2>
+                <h4 class="u-product-control u-text u-text-3">
+                    <a class="u-product-title-link" name="type"><!--product_title_content-->{{ location.type  }}<!--/product_title_content--></a>
+                </h4><!--/product_title--><!--product_price-->
+<h5 name="dateDebut">{{ dateDebut|date('Y-m-d')}}</h5>
+                <h5 name="dateFin">{{ dateFin|date('Y-m-d') }}</h5>
+                <div class="u-product-control u-product-price u-product-price-1">
+                    <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                        <div class="u-hide-price u-old-price"><!--product_old_price_content--><td> </td><!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
+                        <div name="prix" class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;"><!--product_regular_price_content-->{{ location.prix * nb }}<!--/product_regular_price_content--></div><!--/product_regular_price-->
+                    </div>
+                </div><!--/product_price-->
+            </div>
+        </div><!--product_content-->
+        <div class="u-product-control u-product-desc u-text u-text-4"><!--product_content_content-->{{ location.description  }}<!--/product_content_content-->
+            <!-- add button -->
+{#            <a   href="{{ path('reserver') }}">reserver</a>#}
+{#
+            <a  href="{{ path('reserver', {'id': location.id, 'nb': nb, 'dateDeb': dateDebut  "f"}) }}">testttttt</a>
+#}
+            <a  href="{{ path('reserver')}}?id={{ location.id }}&nb={{ nb }}">testttttt</a>
+            <!--div-- class="u-align-center u-form-group u-form-submit">
+                <input type="submit" value="submit" class="u-black u-btn u-btn-round u-btn-submit u-button-style u-radius-50 u-btn-1">
+
+            </div-->
+            {% endfor %}</div><!--/product_content-->
+    </div>
+</div><!--/product_item--
+                <tr>
+
+                    </td>
+                </tr>
+            </div>  </div>  </div>
+</section>
+
+
+
+
+    {{ include('footer.html.twig') }}
+{% endblock %}

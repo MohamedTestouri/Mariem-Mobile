@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+        <tbody>
+                <td>
+                    {# On boucle sur les rôles #}
+                    {% for role in user.roles %}
+                        {% if role == "ROLE_USER" %}
+                            Utilisateur
+                        {% elseif role == "ROLE_ADMIN" %}
+                            Administrateur
+
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+
+        {% else %}
+            <p>Aucun utilisateur inscrit</p>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

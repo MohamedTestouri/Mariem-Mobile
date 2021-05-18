@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block css %}
+        {#{{ encore_entry_link_tags('app') }}#}
+        <link rel="stylesheet" href="{{ asset('../../../oldTemp/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
+
+        <link rel="stylesheet" href="{{asset ('../../../oldTemp/assets/vendors/css/vendor.bundle.base.css')}}">
+
+        <!-- endinject -->
+        <!-- Plugin css for this page -->
+        <!-- End plugin css for this page -->
+        <!-- Layout styles -->
+        <link rel="stylesheet" href="{{asset ('../../../oldTemp/assets/css/demo/style.css')}}">
+
+        <!-- End layout styles -->
+        <link rel="shortcut icon" href="{{asset ('../../../oldTemp/assets/images/favicon.png')}}" />
+
+    {% endblock %}
+
+    {% block js %}
+        {#{{ encore_entry_script_tags('app') }}#}
+        <script src=" {{asset ('../../../oldTemp/assets/vendors/js/vendor.bundle.base.js')}}"></script>
+
+        <!-- endinject -->
+        <!-- Plugin js for this page-->
+        <!-- End plugin js for this page-->
+        <!-- inject:js -->
+        <script src="{{asset ('../../../oldTemp/assets/js/material.js')}}"></script>
+
+        <script src="{{asset ('../../../oldTemp/assets/js/misc.js')}}"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript"></script>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+
+{% endblock %}
+</body>
+</html>

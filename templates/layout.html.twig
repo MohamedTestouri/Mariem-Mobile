@@ -1,0 +1,295 @@
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
+
+    <link href="{{ asset('assets/node_modules/datatables/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dist/css/pages/file-upload.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/css/pages/ecommerce.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/node_modules/dropify/dist/css/dropify.min.css') }}">
+    <link  href="{{ asset('dist/css/pages/user-card.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/node_modules/morrisjs/morris.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/node_modules/Magnific-Popup-master/dist/magnific-popup.css') }}" >
+    <link href="{{ asset('dist/css/style.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/css/pages/float-chart.css')}}" rel="stylesheet">
+
+
+</head>
+
+<body class="skin-default-dark fixed-layout">
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <div class="loader">
+        <div class="loader__figure"></div>
+        <p class="loader__label">Wild Dream </p>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <!-- Logo icon --><b>
+                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                        <!-- Dark Logo icon -->
+
+
+                    </b>
+                    <!--End Logo icon -->
+                    <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="{{ asset('uploads/gitoonlogo.png') }}" alt="GITOON" class="dark-logo" />
+                        <!-- Light Logo text -->
+                         <img src="{{ asset('uploads/gitoonlogo.png') }}" class="light-logo" alt="GITOON" /></span> </a>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse">
+                <!-- ============================================================== -->
+                <!-- toggle and nav items -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav mr-auto">
+                    <!-- This is  -->
+                    <li class="nav-item"> <a class="nav-link nav-toggler d-block d-sm-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                    <!-- ============================================================== -->
+                    <!-- Search -->
+                    <!-- ============================================================== -->
+                </ul>
+                <!-- ============================================================== -->
+                <!-- User profile and search -->
+                <!-- ============================================================== -->
+
+
+                <!-- ============================================================== -->
+                <!-- Comment -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- End Comment -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Messages -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- End Messages -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- mega menu -->
+                <!-- ============================================================== -->
+
+                <ul class="navbar-nav my-lg-10 ">
+
+
+                    <!-- ============================================================== -->
+                    <!-- End mega menu -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- User Profile -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown u-pro">
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src= "{{ asset('assets/images/users/agent2.jpg') }}" alt="user" class=""> <span class="hidden-md-down">&nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                        <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                            <!-- text-->
+                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> Mon Profil</a>
+                            </a>
+                        </div>
+                    </li>
+
+
+
+                    <!-- ============================================================== -->
+                    <!-- End User Profile -->
+                    <!-- ============================================================== -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+
+
+                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">Gitoon</span></a>
+                        <ul aria-expanded="false" class="collapse">
+{#                            <li><a href="{{ path('centre_index') }}">Centre</a></li>#}
+{#                            <li><a href="{{ path('reclamation_index') }}">Reclamation</a></li>#}
+{#                            <li><a href="{{ path('reservation_index') }}">Reservation</a></li>#}
+{#                            <li><a href="{{ path('activite_index') }}">Activite</a></li>#}
+{#                            <li><a href="{{ path('publicite_index') }}">Publicite</a></li>#}
+{#                            <li><a href="{{ path('promotion_index') }}">Promotion</a></li>#}
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+
+            <!-- .row -->
+            {% block body %}
+            {% endblock %}
+
+
+            <!-- /.row -->
+            <!-- .row -->
+
+            <!-- /.row -->
+            <!-- .row -->
+            <!-- /.row -->
+            <!-- .row -->
+
+            <!-- /.row -->
+
+            <!-- ============================================================== -->
+            <!-- End Page Content -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Right sidebar -->
+            <!-- ============================================================== -->
+            <!-- .right-sidebar -->
+
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
+        </div></div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
+    <footer class="footer">
+        © 2020 Esprit
+    </footer>
+    <!-- ============================================================== -->
+    <!-- End footer -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+
+
+<script src="{{ asset('assets/node_modules/jquery/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('assets/node_modules/popper/popper.min.js') }}"></script>
+<script src="{{ asset('assets/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('dist/js/perfect-scrollbar.jquery.min.js') }}"></script>
+<script src="{{ asset('dist/js/waves.js') }}"></script>
+<script src="{{ asset('dist/js/sidebarmenu.js') }}"></script>
+<script src="{{ asset('assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
+
+<script src="{{ asset('assets/node_modules/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+<script src="{{ asset('dist/js/custom.min.js') }}"></script>
+<script src="{{ asset('assets/node_modules/sparkline/jquery.sparkline.min.js') }}"></script>
+<!--Custom JavaScript -->
+<script src="{{ asset('assets/node_modules/raphael/raphael-min.js') }}"></script>
+
+<script src="{{ asset('dist/js/pages/validation.js') }}"></script>
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+<script src="{{ asset('dist/js/pages/jasny-bootstrap.js') }}"></script>
+<script src="{{ asset('assets/node_modules/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/node_modules/dropify/dist/js/dropify.min.js') }}"></script>
+<script src="{{ asset('assets/node_modules/Magnific-Popup-master/dist/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/node_modules/Magnific-Popup-master/dist/jquery.magnific-popup-init.js') }}"></script>
+
+<script src="{{ asset('assets/node_modules/flot/excanvas.js') }}"></script>
+<script src="{{ asset('assets/node_modules/flot/jquery.flot.js') }}"></script>
+<script src="{{ asset('assets/node_modules/flot/jquery.flot.pie.js') }}"></script>
+
+<script src="{{ asset('assets/node_modules/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
+
+
+
+
+<script src="{{ asset('assets/node_modules/toast-master/js/jquery.toast.js') }}"></script>
+
+<!-- javascript -->
+<script type="text/javascript">
+    $(function() {
+        $(".preloader").fadeOut();
+    });
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+    // ==============================================================
+    // Login and Recover Password
+    // ==============================================================
+    $('#to-recover').on("click", function() {
+        $("#loginform").slideUp();
+        $("#recoverform").fadeIn();
+    });
+</script>
+
+
+{% block custom_script %}
+{% endblock %}
+
+
+</body>
+</html>
+
+
+

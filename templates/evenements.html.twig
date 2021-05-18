@@ -1,0 +1,46 @@
+{% extends 'basefront.html.twig' %}
+
+{% block title %}evenements{% endblock %}
+
+{% block body %}
+    {{  include ('head.html.twig') }}
+
+<section class="u-clearfix u-gradient u-section-1" id="sec-9749">
+
+
+    <a class="u-blog-control u-btn u-button-style u-btn-1" href="{{ path('order_index') }}">Trier par nombre de place</a>
+    <a class="u-blog-control u-btn u-button-style u-btn-1" href="{{ path('order_index_place') }}">Trier par prix</a>
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
+        <div class="u-blog u-expanded-width u-blog-1">
+            <div class="u-repeater u-repeater-1"><!--blog_post-->
+        {% for evenement in evenements %}
+
+
+            <div class="u-align-left-xs u-blog-post u-container-style u-gradient u-repeater-item u-repeater-item-1">
+                <div class="u-container-layout u-similar-container u-valign-bottom-lg u-valign-top-xl u-container-layout-1">
+                    <a class="u-post-header-link" href="blog/post.html"><!--blog_post_image-->
+                        <img alt="" class="u-blog-control u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-1" src="{{ asset('oldTemp/images/2.jpeg') }}" height="200" width="300"><!--/blog_post_image-->
+                    </a><!--blog_post_header-->
+                    <h4 class="u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-blog-control u-text u-text-1">
+                        <a class="u-post-header-link" href="blog/post.html"><!--blog_post_header_content-->{{ evenement.title }}<!--/blog_post_header_content--></a>
+                    </h4><!--/blog_post_header--><!--blog_post_metadata-->
+                    <div class="u-blog-control u-metadata u-text-grey-40 u-metadata-1"><!--blog_post_metadata_date-->
+                        <span class="u-meta-date u-meta-icon"><!--blog_post_metadata_date_content-->{{ evenement.date ? evenement.date|date('Y-m-d') : '' }}<!--/blog_post_metadata_date_content--></span><!--/blog_post_metadata_date--><!--blog_post_metadata_comments-->
+                        <span class="u-meta-comments u-meta-icon"><!--blog_post_metadata_comments_content-->{{ evenement.localisation }}<!--/blog_post_metadata_comments_content--></span><!--/blog_post_metadata_comments-->
+                        <span class="u-meta-comments u-meta-icon"><!--blog_post_metadata_comments_content-->{{ evenement.prix }}DT<!--/blog_post_metadata_comments_content--></span><!--/blog_post_metadata_comments-->
+                    </div><!--/blog_post_metadata--><!--blog_post_content-->
+                    <div class="u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-blog-control u-post-content u-text u-text-2"><!--blog_post_content_content-->{{ evenement.description }}<!--/blog_post_content_content--></div><!--/blog_post_content--><!--blog_post_readmore-->
+                    <div class="u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-blog-control u-post-content u-text u-text-2"><!--blog_post_content_content-->{{ evenement.nombrePlace }}<!--/blog_post_content_content--></div><!--/blog_post_content--><!--blog_post_readmore-->
+
+                    <a href="{{ path('evenements_show')}}?id={{ evenement.id }}&nb=1" class="u-blog-control u-btn u-button-style u-btn-1"><!--blog_post_readmore_content-->reserver<!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
+                </div>
+            </div>
+        {% endfor %}
+                        </div> </div> </div>
+
+
+</section>
+
+
+    {{  include ('footer.html.twig') }}
+{% endblock %}

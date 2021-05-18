@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau mot de passe{% endblock %}
+
+{% block body %}
+    {{  form_start(form) }}
+{{ form_widget(form)}}
+<form method="post" >
+
+<input type="hidden" name="codesms" value="{{ code }}">
+</form>
+{% endblock %}

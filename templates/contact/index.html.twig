@@ -1,0 +1,95 @@
+{#{% extends 'base.html.twig' %}#}
+{#{% block title %} contact{% endblock %}#}
+{#{% block body %}#}
+
+
+
+{# {{ form(contactForm) }}#}
+
+
+
+{#  {% endblock %}#}
+
+
+
+{% extends 'newLayout.html.twig' %}
+  {% block style %}
+
+   {#      <link href="dist/css/pages/login-register-lock.css" rel="stylesheet">#}
+
+   <link href="{{ asset('dist/css/pages/login-register-lock.css')}}" rel="stylesheet">
+
+
+
+  {% endblock %}
+
+{% block body %}
+ <section id="wrapper">
+  <div class="login-register" style="background-image:url(../assets/images/background/login-register.jpg);">
+   <div class="login-box card">
+    <div class="card-body">
+
+     {{ form_start(contactForm,{'attr':{'class':'form-horizontal form-material'}}) }}
+
+     <h3 class="box-title m-b-20">NOUS CONTACTER</h3>
+
+     <div class="form-group">
+      <div class="col-xs-12">
+       <input type="hidden" id="recaptchaResponse" name="recaptcha-response">
+      </div>
+      <div class="col-xs-12">
+       {{ form_widget(contactForm.nom,{'attr':{'class':'form-control','placeholder':'Nom'}}) }}
+      </div>
+      <div class="col-xs-12">
+       {{ form_widget(contactForm.email,{'attr':{'class':'form-control','placeholder':'Email'}}) }}
+      </div>
+      <div class="col-xs-12">
+       {{ form_widget(contactForm.message,{'attr':{'class':'form-control','placeholder':'Message'}}) }}
+      </div>
+
+
+
+
+
+     </div>
+     <div class="form-group text-center p-b-10">
+      <div class="col-xs-12">
+{#       {{ form_widget(emailForm.envoyer,{'attr':{'class':'btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light'}}) }}#}
+       {{ form_widget(contactForm.envoyer,{'attr':{'class':'btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light'}}) }}
+      </div>
+     </div>
+     {{ form_end(contactForm) }}
+    </div>
+   </div>
+  </div>
+ </section>
+
+
+
+{% endblock %}
+
+
+
+
+{% block custom_script %}
+
+ <script type="text/javascript">
+  $(function() {
+   $(".preloader").fadeOut();
+  });
+
+ </script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcfHpUaAAAAALL6GIeOLvKFKbLBYvaRMHZV6VU6"></script>
+  <script>
+   grecaptcha.ready(function() {
+    grecaptcha.execute('6LcfHpUaAAAAALL6GIeOLvKFKbLBYvaRMHZV6VU6', {action: 'homepage'}).then(function(token) {
+     document.getElementById('recaptchaResponse').value = token
+    });
+   });
+  </script>
+
+{% endblock %}
+
+
+
+

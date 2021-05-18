@@ -1,0 +1,42 @@
+{% extends 'basefront.html.twig' %}
+
+{% block title %}Location{% endblock %}
+
+{% block body %}
+    {{ include('head.html.twig') }}
+    <h1>Location</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ location.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ location.description }}</td>
+            </tr>
+            <tr>
+                <th>Localisation</th>
+                <td>{{ location.localisation }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ location.prix }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ location.type }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('location_index') }}">back to list</a>
+
+    <a href="{{ path('location_edit', {'id': location.id}) }}">edit</a>
+
+<!--a href="{{ path('location_show', {'id': location.id}) }}">show</a-->
+
+    {{ include('location/_delete_form.html.twig') }}
+    {{ include('footer.html.twig') }}
+{% endblock %}

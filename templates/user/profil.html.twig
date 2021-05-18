@@ -1,0 +1,32 @@
+{% extends 'basefront.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+   {{ include ('head.html.twig') }}
+    <section class="u-clearfix u-gradient u-section-1" id="sec-23f5">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                <div class="u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-23 u-layout-cell-1">
+                            <div class="u-container-layout u-valign-top u-container-layout-1">
+                                <div alt="" class="u-image u-image-circle u-image-1" src="{{ asset(user.photos ) }}asset()" data-image-width="256" data-image-height="256"></div>
+                            </div>
+                        </div>
+                        <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
+                            <div class="u-container-layout u-container-layout-2">
+                                <h2 class="u-text u-text-1">{{ user.nom }}   {{ user.prenom }}</h2>
+                                <p class="u-text u-text-2"> {{ user.phone }}  {{ user.adresse }}  {{ user.photos }}  {{  user.job}} {{ user.Pseudo }} {{ user.localisation }}</p>
+                                <a href="" class="u-btn u-button-style u-btn-1">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {{ include ('footer.html.twig') }}
+{% endblock %}
